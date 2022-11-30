@@ -1,0 +1,359 @@
+:root {
+  --blue: #0891b2;
+}
+
+/* Grid */
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 3fr / 1fr 4fr;
+}
+
+.container > div {
+  /* background-color: #0891b2;
+  border: 4px solid #ccc; */
+  padding: 32px;
+}
+
+.sidebar {
+  grid-row: span 2;
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 32px;
+}
+
+/* .sidebar > div {
+  background-color: #f55442;
+  border: 4px solid #ccc;
+} */
+
+.sidebar .logo,
+.sidebar .link {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 58px 1fr;
+  align-items: center;
+}
+
+.sidebar .menu {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar .icon {
+  text-align: center;
+}
+
+/* .sidebar .icon,
+.sidebar .text {
+  background-color: #8ac27a;
+  border: 4px solid #ccc;
+} */
+
+.header {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr auto;
+}
+
+/* .header > div {
+  background-color: #f55442;
+  border: 4px solid #ccc;
+} */
+
+/* .header .icon,
+.header .text {
+  background-color: #8ac27a;
+  border: 4px solid #ccc;
+} */
+
+.header .searchbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.header .account {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  align-items: center;
+  justify-items: end;
+}
+
+.header .greating {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px;
+  align-items: center;
+  align-content: center;
+}
+
+.header .greating .icon {
+  grid-row: span 2;
+}
+
+.header .controls {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 16px;
+  align-items: center;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 16px;
+}
+
+/* .main-content > div {
+  background-color: #f55442;
+  border: 4px solid #ccc;
+} */
+
+.main-content .projects {
+  grid-row: span 2;
+  display: grid;
+  grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: min-content;
+  gap: 16px;
+}
+
+/* .main-content .projects > div {
+  background-color: #8ac27a;
+  border: 4px solid #ccc;
+} */
+
+.main-content .projects .title {
+  grid-column: 1 / -1;
+}
+
+.main-content .projects .card {
+  height: 200px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.main-content .projects .card .links {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, min-content);
+  justify-self: end;
+}
+
+/* .main-content .announcements > div {
+  background-color: #8ac27a;
+  border: 4px solid #ccc;
+} */
+
+.main-content .announcements {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 16px;
+}
+
+.main-content .announcements .card {
+  display: grid;
+  grid-auto-rows: min-content;
+}
+
+.main-content .announcements .card .announcement {
+  /* background-color: #8ac27a;
+  border: 4px solid #ccc; */
+  padding: 16px;
+}
+
+/* .main-content .trendings > div {
+  background-color: #8ac27a;
+  border: 4px solid #ccc;
+} */
+
+.main-content .trendings {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 16px;
+}
+
+.main-content .trendings .card {
+  display: grid;
+  grid-auto-rows: min-content;
+}
+
+.main-content .trendings .card .trending {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px;
+  align-items: center;
+}
+
+.main-content .trendings .card .trending {
+  /* background-color: #8ac27a;
+  border: 4px solid #ccc; */
+  padding: 16px
+}
+
+.main-content .trendings .card .trending .icon {
+  grid-row: span 2;
+}
+
+/* Style */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+  background-color: #0891b2;
+  color: #fff;
+  font-weight: 700;
+}
+
+.sidebar .logo .icon svg {
+  width: 48px;
+  fill: #fff;
+}
+
+.sidebar .logo .text {
+  font-size: 24px;
+}
+
+.sidebar .menu .link .icon svg {
+  width: 24px;
+  fill: #fff;
+}
+
+.header {
+  background-color: #fff;
+  color: #333;
+  font-weight: 700;
+}
+
+.header .searchbar .icon svg {
+  width: 24px;
+  fill: #333;
+}
+
+.header .searchbar .text input {
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  height: 32px;
+  padding: 0 8px;
+  background-color: #e5e7eb;
+}
+
+.header .account .icon svg {
+  width: 24px;
+  fill: #333;
+}
+
+.header .account .icon-2 svg {
+  width: 38px;
+}
+
+.header .greating .icon {
+  width: 64px;
+}
+
+.header .greating .text-1 {
+  font-size: 12px;
+  align-self: flex-end;
+  padding-bottom: 4px;
+}
+
+.header .greating .text-2 {
+  font-size: 20px;
+  align-self: flex-start;
+}
+
+.header .controls .text {
+  color: #fff;
+  background-color: #0891b2;
+  padding: 8px 24px;
+  border-radius: 25px;
+  font-size: 12px;
+}
+
+.main-content {
+  border-top: 2px solid #d2d2d4;
+  background-color: #e5e7eb;
+  color: #333;
+}
+
+.main-content > div > .title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main-content .projects .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-left: 8px solid #eab308;
+}
+
+.main-content .projects .card .title {
+  font-size: 16px;
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+
+.main-content .projects .card .description {
+  font-size: 12px;
+}
+
+.main-content .projects .card .icon svg {
+  width: 16px;
+  fill: #333;
+}
+
+.main-content .announcements .card {
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 16px;
+}
+
+.main-content .announcements .announcement:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.main-content .announcements .announcement .title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 4px;
+}
+
+.main-content .announcements .announcement .description {
+  font-size: 12px;
+}
+
+.main-content .trendings .card {
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 16px;
+}
+
+.main-content .trendings .trending .icon svg {
+  width: 38px;
+  fill: #333;
+}
+
+.main-content .trendings .trending .title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 4px;
+  align-self: flex-end;
+}
+
+.main-content .trendings .trending .description {
+  font-size: 12px;
+  align-self: flex-start;
+}
