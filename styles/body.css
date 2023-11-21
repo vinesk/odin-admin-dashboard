@@ -6,9 +6,9 @@ body {
   grid-template-areas:
     "aside header"
     "aside main";
-  font-family: "Roboto", sans-serif;
 }
 
 body > * {
+  font-family: "Roboto", sans-serif;
   padding: 1.5rem;
 }

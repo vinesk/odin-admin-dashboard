@@ -17,4 +17,103 @@
 @import url("./header.css");
 
 /* Main */
-@import url("./main.css");
+/* @import url("./main.css"); */
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr 300px;
+  grid-template-areas:
+    "projects announcements"
+    "projects trending";
+  gap: 2rem;
+  background-color: var(--grey);
+}
+
+/* Main - Projects */
+.main .projects {
+  grid-area: projects;
+}
+
+.main .projects .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 200px;
+  gap: 2rem;
+}
+
+.main .projects .list .card {
+  display: flex;
+  flex-direction: column;
+  gap: ;
+  background-color: var(--white);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.main .projects .list .card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: var(--secondary-color);
+}
+
+.main .projects .list .card .text {
+  flex: 1;
+  color: var(--tertiary-color);
+  font-size: 0.875rem;
+  overflow: scroll;
+  margin-bottom: 0.25rem;
+}
+
+.main .projects .list .card .controls {
+  align-self: end;
+  display: flex;
+  gap: 1rem;
+}
+
+.main .projects .list .card .controls a {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.main .projects .list .card .controls a .icon {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  mask-size: cover;
+  cursor: pointer;
+}
+
+.main .projects .list .card .controls a .icon:hover {
+  background-color: var(--black);
+}
+
+.main .projects .list .card .controls .icon-star {
+  mask: url("../img/icon-star.svg");
+}
+
+.main .projects .list .card .controls .icon-eye {
+  mask: url("../img/icon-eye.svg");
+}
+
+.main .projects .list .card .controls .icon-share {
+  mask: url("../img/icon-share.svg");
+}
+
+/* Main - Announcements */
+.main .announcements {
+  grid-area: announcements;
+}
+
+/* Main - Trending */
+.main .trending {
+  grid-area: trending;
+}

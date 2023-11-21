@@ -12,8 +12,6 @@
   display: grid;
   grid-template-columns: 3rem 1fr;
   gap: 1rem;
-  font-size: 1.5rem;
-  font-weight: 700;
   color: var(--white);
   text-decoration: none;
 }
