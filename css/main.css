@@ -1,0 +1,158 @@
+/* Reset */
+@import url("./reset.css");
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Global */
+:root {
+  /* Colors */
+  --black: #000;
+  --white: #fff;
+  --primary-color: rgb(50, 120, 180);
+  --secondary-color: rgb(160, 110, 0);
+  --tertiary-color: rgb(90, 90, 90);
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    "aside header"
+    "aside main";
+  font-family: "Roboto", sans-serif;
+}
+
+body > * {
+  padding: 1rem;
+}
+
+/* Aside */
+.aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-rows: repeat(2, auto) 1fr;
+  gap: 3rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Aside - Logo */
+.aside .logo a {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.aside .logo a .icon {
+  width: 3rem;
+  height: 3rem;
+  place-self: center;
+  background-color: #fff;
+  mask: url("../img/icon-dashboard.svg");
+  mask-size: cover;
+}
+
+.aside .logo a .text {
+  align-self: center;
+}
+
+/* Aside - Nav */
+.aside .nav a {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+  gap: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.aside .nav a .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  place-self: center;
+  background-color: #fff;
+  mask-size: cover;
+}
+
+.aside .nav a .icon-home {
+  mask: url("../img/icon-home.svg");
+}
+
+.aside .nav a .icon-profile {
+  mask: url("../img/icon-profile.svg");
+}
+
+.aside .nav a .icon-messages {
+  mask: url("../img/icon-messages.svg");
+}
+
+.aside .nav a .icon-history {
+  mask: url("../img/icon-history.svg");
+}
+
+.aside .nav a .icon-tasks {
+  mask: url("../img/icon-tasks.svg");
+}
+
+.aside .nav a .icon-communities {
+  mask: url("../img/icon-communities.svg");
+}
+
+.aside .nav a .icon-settings {
+  mask: url("../img/icon-settings.svg");
+}
+
+.aside .nav a .icon-support {
+  mask: url("../img/icon-support.svg");
+}
+
+.aside .nav a .icon-privacy {
+  mask: url("../img/icon-privacy.svg");
+}
+
+.aside .nav a .text {
+  align-self: center;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+}
+
+/* Main */
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "projects annoncements"
+    "projects trading";
+}
+
+/* Main - Projects */
+.projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Main - Annoncements */
+.annoncements {
+  grid-area: annoncements;
+}
+
+/* Main - Trading */
+.trading {
+  grid-area: trading;
+}
