@@ -25,7 +25,6 @@
 .main .projects .list .card {
   display: flex;
   flex-direction: column;
-  gap: ;
   background-color: var(--white);
   border-radius: 0.5rem;
   padding: 1.5rem;
