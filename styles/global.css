@@ -1,0 +1,9 @@
+:root {
+  /* Colors */
+  --black: #000;
+  --white: #fff;
+  --grey: rgb(225, 225, 225);
+  --primary-color: rgb(50, 120, 180);
+  --secondary-color: rgb(160, 110, 0);
+  --tertiary-color: rgb(75, 75, 75);
+}

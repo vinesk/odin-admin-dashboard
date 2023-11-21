@@ -1,0 +1,14 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 300px 1fr;
+  grid-template-areas:
+    "aside header"
+    "aside main";
+  font-family: "Roboto", sans-serif;
+}
+
+body > * {
+  padding: 1.5rem;
+}

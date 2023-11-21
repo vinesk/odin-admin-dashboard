@@ -8,9 +8,9 @@
     <title>The Odin Project - Admin dashboard</title>
     <!-- Links -->
     <link rel="shortcut icon" href="./img/icon-odin.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <!-- Scripts -->
-    <script src="./js/main.js" defer></script>
+    <script src="./scripts/scripts.js" defer></script>
   </head>
   <body>
     <!-- Aside -->
@@ -67,7 +67,35 @@
     </aside>
 
     <!-- Header -->
-    <header class="header">Header</header>
+    <header class="header">
+      <!-- Header - Search bar -->
+      <form class="search-bar" action="#" method="get">
+        <label for="search-bar"><span class="icon icon-search"></span></label>
+        <input type="text" name="search-bar" id="search-bar" />
+      </form>
+      <!-- Header - Account -->
+      <div class="account">
+        <a href="#">
+          <span class="icon icon-notification"></span>
+        </a>
+        <a href="#">
+          <span class="icon icon-account"></span>
+          Vinesk
+        </a>
+      </div>
+      <!-- Header - Greetings -->
+      <div class="greetings">
+        <span class="icon icon-account"></span>
+        <span class="text1">Hi there,</span>
+        <span class="text2">Vinesk (@vinesk)</span>
+      </div>
+      <!-- Header - Controls -->
+      <div class="controls">
+        <button>New</button>
+        <button>Upload</button>
+        <button>Share</button>
+      </div>
+    </header>
 
     <!-- Main -->
     <main class="main">

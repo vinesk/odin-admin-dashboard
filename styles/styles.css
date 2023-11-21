@@ -1,0 +1,20 @@
+/* Reset */
+@import url("./reset.css");
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Global */
+@import url("./global.css");
+
+/* Body */
+@import url("./body.css");
+
+/* Aside */
+@import url("./aside.css");
+
+/* Header */
+@import url("./header.css");
+
+/* Main */
+@import url("./main.css");

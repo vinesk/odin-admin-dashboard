@@ -1,0 +1,26 @@
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "projects annoncements"
+    "projects trading";
+}
+
+/* Main - Projects */
+.projects {
+  grid-area: projects;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+/* Main - Annoncements */
+.annoncements {
+  grid-area: annoncements;
+}
+
+/* Main - Trading */
+.trading {
+  grid-area: trading;
+}
